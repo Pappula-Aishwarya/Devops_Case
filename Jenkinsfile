@@ -5,21 +5,21 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Building Docker image..."
-                bat 'docker build -t yourdockerhubusername/todoapp:latest .'
+                bat 'docker build -t aishwarya956/todoapp:latest .'
             }
         }
 
         stage('Docker Login') {
             steps {
                 echo "Logging in to Docker Hub..."
-                bat 'docker login -u <username> -p <password>'
+                bat 'docker login -u aishwarya956 -p 123456789'
             }
         }
 
         stage('Push Docker Image') {
             steps {
                 echo "Pushing Docker image to Docker Hub..."
-                bat 'docker push yourdockerhubusername/todoapp:latest'
+                bat 'docker push aishwarya956/todoapp:latest'
             }
         }
 
